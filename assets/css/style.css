@@ -409,6 +409,7 @@ h6 {
   background: url("../img/Override/cprqppfs.png") top center;
   background-size: cover;
   position: relative;
+  background-attachment: fixed;
 }
 
 #hero:before {
