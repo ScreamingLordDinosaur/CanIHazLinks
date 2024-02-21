@@ -9,7 +9,7 @@
             "type": "chrome",
             "request": "launch",
             "name": "Launch Chrome against localhost",
-            "url": "Y:/MyStuff/CanIHazLinks/index.html",
+            "url": "file:///Y:/git/CanIHazLinks/index.html",
             "webRoot": "${workspaceFolder}"
         }
     ]
