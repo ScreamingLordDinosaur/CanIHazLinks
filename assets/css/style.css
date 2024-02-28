@@ -1547,3 +1547,25 @@ section {
   font-size: 13px;
   color: #fff;
 }
+
+
+.iframe-container {
+  position: relative;
+  width: 100%;
+  padding-bottom: 90%; /* Adjust this value based on your aspect ratio (16:9 is 56.25%) */
+}
+
+.iframe-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Override styles for direct children of a row using !important */
+.littlecol > * {
+  width: 8.3333% !important;
+  padding-right: 6px;
+  padding-left: 6px;
+}
