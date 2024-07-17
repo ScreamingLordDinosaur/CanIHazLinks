@@ -90,7 +90,8 @@
           document.getElementById('signout_button').style.visibility = 'visible';
           document.getElementById('authorize_button').innerText = 'Refresh';
           await listMajors();
-          await listSheets();
+          await create('hmmHA');
+          //await listSheets();
         };
 
         if (gapi.client.getToken() === null) {
@@ -165,6 +166,23 @@
       console.error('Error retrieving sheets:', response.result.error.message);
     });
   }
+
+
+async function create(title, callback) {
+  try {
+    gapi.client.sheets.spreadsheets.create({
+      properties: {
+        title: title,
+      },
+    }).then((response) => {
+      if (callback) callback(response);
+      console.log('Spreadsheet ID: ' + response.result.spreadsheetId);
+    });
+  } catch (err) {
+    document.getElementById('content').innerText = err.message;
+    return;
+  }
+}
       
     </script>
     <script async defer src="https://apis.google.com/js/api.js" onload="gapiLoaded()"></script>
