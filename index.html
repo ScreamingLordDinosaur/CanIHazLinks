@@ -90,8 +90,8 @@
           document.getElementById('signout_button').style.visibility = 'visible';
           document.getElementById('authorize_button').innerText = 'Refresh';
           await listMajors();
-          create('hmmHA');
-          //await listSheets();
+          create('hmmHA2');
+          await listSheets();
         };
 
         if (gapi.client.getToken() === null) {
